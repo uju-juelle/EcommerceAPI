@@ -8,6 +8,7 @@ from .views import *
 urlpatterns = [
     path("", list_All_Product_page.as_view(), name="list"),
     path("<int:id>/", single_page.as_view(), name="single"),
+    path("category/", category_page.as_view(), name="category"),
 ]
 
 
