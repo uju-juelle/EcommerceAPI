@@ -21,15 +21,15 @@ class list_All_Product_page(APIView):
     
 
 
-class single_page(APIView):
-    def get(self, request, id):
-        single = Product.objects.get(id=id)
-        serializer = ProductSerializer(single)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+# class single_page(APIView):
+#     def get(self, request, id):
+#         single = Product.objects.get(id=id)
+#         serializer = ProductSerializer(single)
+#         return Response(serializer.data, status=status.HTTP_200_OK)
     
-    def delete(self, request, id):
-        serializers = Product.objects.get(id=id)
-        serializers.delete()
+#     def delete(self, request, id):
+#         serializers = Product.objects.get(id=id)
+#         serializers.delete()
         return Response("successfully deleted", status=status.HTTP_200_OK)
     
 
